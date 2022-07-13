@@ -1,0 +1,61 @@
+
+
+html, body {
+    background-color: #218fc2;
+    height: 100%;
+}
+
+.container {
+    display: flex;
+    height: 100%;
+    align-items: center;
+    justify-content: center;
+    
+}
+
+#toggle {
+    position: absolute;
+    opacity: 0;
+}
+
+.checkbox .trace{
+    position: relative;
+    display: block;
+    height: 5px;
+    width: 40px;
+    border-radius: 30px;
+    background: black;
+
+}
+
+.checkbox .trace:nth-child(1) {
+    top: 0px;
+    transform: rotate(0);
+
+}
+
+.checkbox .trace:nth-child(2) {
+    top: 10px;
+    transform: rotate(0);
+
+}
+
+.checkbox .trace:nth-child(3) {
+    top: 20px;
+    transform: rotate(0);
+    
+}
+
+#toggle:checked + .checkbox .trace:nth-child(1) {
+    transform: rotate(-45deg);
+    top: 18px;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(2) {
+    opacity: 0;
+}
+
+#toggle:checked + .checkbox .trace:nth-child(3) {
+    transform: rotate(45deg);
+    top: 8px
+}
